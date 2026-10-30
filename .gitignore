@@ -12,3 +12,12 @@ profile.svg
 
 # Time trace
 trace.json
+
+# Roblox
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+*.rbxm
+*.rbxmx
+sourcemap.json

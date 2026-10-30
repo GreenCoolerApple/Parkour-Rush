@@ -1,0 +1,121 @@
+{
+  "name": "Parkour-Rush",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
+      "Shared": {
+        "$path": "src/shared"
+      }
+    },
+    "ServerScriptService": {
+      "$ignoreUnknownInstances": true,
+      "Server": {
+        "$path": "src/server"
+      }
+    },
+    "StarterPlayer": {
+      "$ignoreUnknownInstances": true,
+      "StarterPlayerScripts": {
+        "$ignoreUnknownInstances": true,
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+    "Workspace": {
+      "$ignoreUnknownInstances": true,
+      "Checkpoints": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "1": {
+          "$className": "SpawnLocation",
+          "$properties": {
+            "Anchored": true,
+            "Neutral": true,
+            "Duration": 0,
+            "Size": [12, 1, 12],
+            "Position": [0, 50, 0],
+            "Color": [0.2, 0.8, 0.4],
+            "Material": "SmoothPlastic"
+          }
+        },
+        "2": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Size": [12, 1, 12],
+            "Position": [0, 50, -40],
+            "Color": [0.2, 0.8, 0.4],
+            "Material": "SmoothPlastic"
+          }
+        },
+        "3": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Size": [12, 1, 12],
+            "Position": [0, 56, -76],
+            "Color": [0.2, 0.8, 0.4],
+            "Material": "SmoothPlastic"
+          }
+        }
+      },
+      "Course": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "Platform1": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Size": [6, 1, 6],
+            "Position": [0, 50, -14],
+            "Color": [0.9, 0.9, 0.9],
+            "Material": "SmoothPlastic"
+          }
+        },
+        "Platform2": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Size": [6, 1, 6],
+            "Position": [0, 50, -26],
+            "Color": [0.9, 0.9, 0.9],
+            "Material": "SmoothPlastic"
+          }
+        },
+        "Platform3": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Size": [6, 1, 6],
+            "Position": [0, 53, -54],
+            "Color": [0.9, 0.9, 0.9],
+            "Material": "SmoothPlastic"
+          }
+        },
+        "Platform4": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Size": [6, 1, 6],
+            "Position": [0, 56, -64],
+            "Color": [0.9, 0.9, 0.9],
+            "Material": "SmoothPlastic"
+          }
+        },
+        "Lava": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Size": [60, 1, 120],
+            "Position": [0, 40, -40],
+            "Color": [1, 0.3, 0.1],
+            "Material": "Neon",
+            "Tags": ["KillPart"]
+          }
+        }
+      }
+    }
+  }
+}
