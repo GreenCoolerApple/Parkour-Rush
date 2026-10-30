@@ -7,8 +7,10 @@ A parkour (obby) game for Roblox, written in Luau and synced with [Rojo](https:/
 - Numbered checkpoints with stage leaderboard
 - Progress saved with DataStore
 - Kill parts via the `KillPart` tag
-- Stage HUD
-- Starter course included in the project file
+- 4 themed levels generated from code: Rooftops, Sky Islands, Lava Factory and Neon Void
+- Platform types: jumps, beams, trusses, conveyors, fading, bounce pads, moving platforms and spinners
+- Themed scenery and lighting for each level
+- HUD with level name and progress
 
 ## Setup
 
@@ -28,9 +30,22 @@ src/
 └── shared/       ReplicatedStorage.Shared
 ```
 
-## Adding stages
+## Editing levels
 
-Add parts named `4`, `5`, `6`... inside `Workspace.Checkpoints`. Players can only advance one stage at a time.
+Levels live in `src/shared/Levels.luau`. Each level has a theme and a list of stages, and each stage is a list of segments:
+
+| Type | Fields |
+| --- | --- |
+| `Jumps` | `Count`, `Gap`, `Rise`, `Zigzag`, `Size` |
+| `Narrow` | `Length`, `Gap` |
+| `Truss` | `Height` (even number) |
+| `Conveyor` | `Length`, `Speed` |
+| `Fade` | `Count`, `Gap` |
+| `Bounce` | `Height`, `Power` |
+| `Moving` | `Count`, `Range`, `Speed` |
+| `Spinner` | `Speed` |
+
+A checkpoint is added automatically at the end of every stage. The course is built when the server starts.
 
 ## License
 

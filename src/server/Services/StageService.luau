@@ -4,7 +4,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Config = require(ReplicatedStorage.Shared.Config)
 local DataService = require(script.Parent.DataService)
 
-local checkpoints = workspace:WaitForChild(Config.CheckpointFolder)
+local checkpoints: Instance
 
 local StageService = {}
 
@@ -98,6 +98,8 @@ local function bindCheckpoint(checkpoint: Instance)
 end
 
 function StageService.Start()
+	checkpoints = workspace:WaitForChild(Config.CheckpointFolder)
+
 	for _, checkpoint in checkpoints:GetChildren() do
 		bindCheckpoint(checkpoint)
 	end
